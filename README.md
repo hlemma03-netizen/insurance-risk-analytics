@@ -48,6 +48,39 @@ Margin = TotalPremium - TotalClaims
 
 Measures profit contribution per policy.
 
+Project Structure
+
+insurance-risk-analytics/
+
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+
+├── data/
+
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_hypothesis_testing.ipynb
+│   └── 03_modeling.ipynb
+
+├── reports/
+│   └── final_report.md
+
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   ├── eda_utils.py
+│   ├── hypothesis_tests.py
+│   └── modeling.py
+
+├── tests/
+
+├── .dvc/
+├── .gitignore
+├── dvc.yaml
+├── requirements.txt
+└── README.md
+
 Exploratory Data Analysis (EDA)
 
 The EDA phase includes:

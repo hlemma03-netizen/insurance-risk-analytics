@@ -1,147 +1,233 @@
-Insurance Risk Analytics & Predictive Modeling
-Project Overview
+# Insurance Risk Analytics & Predictive Modeling
 
-This project focuses on end-to-end insurance risk analytics using historical automobile insurance data from AlphaCare Insurance Solutions (ACIS) in South Africa. The objective is to analyze customer, vehicle, policy, and claims data to uncover low-risk customer segments and support data-driven insurance pricing strategies.
+## Project Overview
+
+This project focuses on end-to-end insurance risk analytics using historical automobile insurance data from AlphaCare Insurance Solutions (ACIS) in South Africa. The goal is to analyze customer, vehicle, policy, and claims data to identify low-risk customer segments and support data-driven insurance pricing strategies.
 
 The project includes:
+- Exploratory Data Analysis (EDA)
+- Risk and profitability analysis
+- Statistical hypothesis testing
+- Predictive modeling
+- Data Version Control (DVC)
+- Risk-based pricing insights
 
-Exploratory Data Analysis (EDA)
-Risk and profitability analysis
-Data Version Control (DVC)
-Statistical hypothesis testing
-Predictive modeling
-Risk-based pricing insights
+---
 
-Business Objective
+# Business Objective
 
-AlphaCare Insurance Solutions (ACIS) aims to optimize marketing strategy and improve premium pricing decisions using historical insurance claim data.
+The main objectives are to:
+- Identify low-risk customer segments
+- Analyze claim behavior across provinces, vehicle types, and demographics
+- Measure profitability using Loss Ratio and Margin metrics
+- Build reproducible analytics pipelines
+- Support predictive risk modeling
 
-The key goals are:
+---
 
-Identify low-risk customer segments
-Analyze claim behavior across provinces, vehicle types, and demographics
-Understand profitability using Loss Ratio and Margin metrics
-Build reproducible analytics pipelines
-Support future predictive risk modeling
+# Dataset Description
 
-Dataset Description
+The dataset contains approximately 18 months of historical automobile insurance data from February 2014 to August 2015.
 
-The dataset contains approximately 18 months of historical car insurance data from February 2014 to August 2015.
+## Main Features
 
-Main Data Categories
-Category	Examples
-Policy	   PolicyID, UnderwrittenCoverID
-Client	   Gender, MaritalStatus, Citizenship
-Vehicle	   Make, Model, VehicleType
-Location   Province, PostalCode
-Plan	   SumInsured, CoverType
-Financial  TotalPremium, TotalClaims
+| Category | Examples |
+|---|---|
+| Policy | PolicyID, UnderwrittenCoverID |
+| Client | Gender, MaritalStatus |
+| Vehicle | Make, Model, VehicleType |
+| Location | Province, PostalCode |
+| Financial | TotalPremium, TotalClaims |
 
-Key Metrics
-Loss Ratio
+---
+
+# Key Metrics
+
+## Loss Ratio
+
 Loss Ratio = TotalClaims / TotalPremium
 
 Measures insurance portfolio risk and profitability.
 
-Margin
+## Margin
+
 Margin = TotalPremium - TotalClaims
 
 Measures profit contribution per policy.
 
-Project Structure
+---
 
+# Project Structure
+
+```bash
 insurance-risk-analytics/
-
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-
+│
 ├── data/
-
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_hypothesis_testing.ipynb
-│   └── 03_modeling.ipynb
-
 ├── reports/
-│   └── final_report.md
-
 ├── src/
-│   ├── __init__.py
-│   ├── data_loader.py
-│   ├── eda_utils.py
-│   ├── hypothesis_tests.py
-│   └── modeling.py
-
 ├── tests/
-
-├── .dvc/
-├── .gitignore
-├── dvc.yaml
+├── .github/workflows/
 ├── requirements.txt
+├── dvc.yaml
 └── README.md
+```
 
-Exploratory Data Analysis (EDA)
+---
+
+# Exploratory Data Analysis (EDA)
 
 The EDA phase includes:
+- Missing value analysis
+- Outlier detection
+- Geographic risk analysis
+- Vehicle claim analysis
+- Financial trend analysis
+- Correlation analysis
 
-Data summarization
-Missing value analysis
-Outlier detection
-Geographic risk analysis
-Vehicle claim analysis
-Financial variable distributions
-Temporal trend analysis
-Correlation analysis
-Main Insights Explored
-Portfolio Loss Ratio
-Claims by Province
-Claims by Gender
-VehicleType risk comparison
-Monthly claims trends
-Premium vs Claims relationships
+## Key Insights Explored
+- Portfolio Loss Ratio
+- Claims by Province
+- Claims by Gender
+- VehicleType risk comparison
+- Monthly claims trends
+- Premium vs Claims relationships
 
-Technologies Used
+---
 
-Programming Language
-Python
-Data Analysis
-pandas
-numpy
-Visualization
-matplotlib
-seaborn
-plotly
-Machine Learning
-scikit-learn
-XGBoost
-Data Version Control
-DVC
-Development Tools
-Git
-GitHub
-GitHub Actions
-Jupyter Notebook
+# Predictive Modeling
 
+The project supports:
+- Claim severity prediction
+- Claim probability prediction
+- Customer risk scoring
+- Risk-based pricing
 
-CI/CD Pipeline
+## Algorithms Used
+- Linear Regression
+- Logistic Regression
+- Random Forest
+- XGBoost
 
-GitHub Actions is configured to automatically:
+---
 
-Run tests
-Validate code quality
-Check project consistency
+# Technologies Used
+
+- Python
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- plotly
+- scikit-learn
+- XGBoost
+- DVC
+- Git & GitHub
+- GitHub Actions
+- Jupyter Notebook
+
+---
+
+# CI/CD Pipeline
+
+GitHub Actions is configured to:
+- Run tests
+- Validate code quality
+- Check project consistency
 
 on every push and pull request.
 
-Future Work
-Statistical hypothesis testing
-Claim severity prediction
-Claim probability modeling
-Risk-based premium optimization
-Model explainability using SHAP
+---
 
+# Data Version Control (DVC)
 
-Author
+## Initialize DVC
+
+```bash
+dvc init
+```
+
+## Pull Dataset
+
+```bash
+dvc pull
+```
+
+## Add Dataset Version
+
+```bash
+dvc add data/insurance_data.csv
+```
+
+## Push Dataset
+
+```bash
+dvc push
+```
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone <your-repository-url>
+cd insurance-risk-analytics
+```
+
+## Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+## Activate Environment
+
+### Linux/macOS
+```bash
+source venv/bin/activate
+```
+
+### Windows
+```bash
+venv\Scripts\activate
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Run Project
+
+## Open Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+## Run Tests
+
+```bash
+pytest
+```
+
+---
+
+# Future Work
+
+- Advanced hypothesis testing
+- Improved predictive modeling
+- Risk-based premium optimization
+- Model explainability using SHAP
+- Interactive dashboards
+
+---
+
+# Author
 
 Hana Lemma

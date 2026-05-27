@@ -1,6 +1,10 @@
 venv/
-data/
-.ipynb_checkpoints/
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
+
+data/
 .dvc/cache/
+
+.env
+.DS_Store
